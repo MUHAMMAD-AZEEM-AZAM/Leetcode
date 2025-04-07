@@ -5,11 +5,10 @@ class Solution:
         merged=''
         i=0
         j=0  
-        
         while i<len_1 and j<len_2:
-                merged=merged+word1[i]
+                merged+=word1[i]
                 i+=1
-                merged=merged+word2[j]
+                merged+=word2[j]
                 j+=1
         merged+=word1[i:]  
         merged+=word2[j:]       
