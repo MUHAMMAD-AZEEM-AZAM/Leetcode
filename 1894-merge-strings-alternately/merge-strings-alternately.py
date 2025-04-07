@@ -4,7 +4,7 @@ class Solution:
         len_2=len(word2)
         merged=''
         i=0
-        j=0         # word1 = "abc", word2 = "pqr"
+        j=0  
         
         while i<len_1 and j<len_2:
                 merged=merged+word1[i]
