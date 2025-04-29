@@ -11,6 +11,6 @@ class Solution:
         sub=s[j:len(s)]
         if sub!="":
             st.append(sub)       
-        return ' '.join(reversed(st))
+        return ' '.join(st[::-1])
 
         
