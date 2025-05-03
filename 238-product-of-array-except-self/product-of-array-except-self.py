@@ -1,6 +1,5 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        j=0
         length=len(nums)
         result=[1]*length
         j=0
