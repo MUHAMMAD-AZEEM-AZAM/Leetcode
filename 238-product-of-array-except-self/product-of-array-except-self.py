@@ -4,13 +4,9 @@ class Solution:
         length=len(nums)
         result=[1]*length
         j=0
-        for i in range(length):
-            if i==0:
-                result[i]=1
-                continue
-            if i==1:    
-                result[i]=nums[0]
-                continue
+        result[0]=1
+        result[1]=nums[0]
+        for i in range(2,length):
             result[i]=nums[i-1]*result[i-1]   
         right=nums[-1]     
         for i in range(length-2,-1,-1):
