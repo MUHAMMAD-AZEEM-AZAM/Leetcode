@@ -5,10 +5,11 @@ class Solution:
         j=0
         result[1]=nums[0]
         for i in range(2,length):
-            result[i]=nums[i-1]*result[i-1]   
-        right=nums[-1]     
+            result[i]=nums[i-1]*result[i-1]
+        right=nums[-1]
         for i in range(length-2,-1,-1):
             result[i]*=right
-            right*=nums[i]   
-        return  result
+            right*=nums[i]
+        return result     
 
+       
