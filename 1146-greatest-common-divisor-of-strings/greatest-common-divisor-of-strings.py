@@ -3,12 +3,8 @@ class Solution:
         def divides(st,subS):
             if len(st)%len(subS)!=0:
                 return False
-            n=0    
-            for i in range(int(len(st)/len(subS))):
-                if st[n:n+len(subS)]!=subS:
-                    return False
-                n=n+len(subS)    
-            return True          
+            n=len(st)//len(subS)    
+            return st==n*subS   
 
         check=0
         minimum=min(len(str1),len(str2))
