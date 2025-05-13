@@ -9,8 +9,9 @@ class Solution:
             return h*w
         area=cal_area()    
         for i in range(len(height)):
-            if area<cal_area():
-                area=cal_area()
+            new_area=cal_area()
+            if area<new_area:
+                area=new_area
             print(area)
             if height[start]<height[end] and start<end:
                 start+=1
