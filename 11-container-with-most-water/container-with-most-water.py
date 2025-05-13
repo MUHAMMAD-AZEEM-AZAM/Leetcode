@@ -4,13 +4,13 @@ class Solution:
         end=len(height)-1
         area=0
    
-        for i in range(len(height)):
+        while start<end:
             h=min(height[start],height[end])
             w=end-start
             new_area= h*w
             if area<new_area:
                 area=new_area
-            if height[start]<height[end] and start<end:
+            if height[start]<height[end]:
                 start+=1
             else:
                 end-=1 
