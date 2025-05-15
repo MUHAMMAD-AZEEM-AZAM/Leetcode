@@ -2,7 +2,7 @@ class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
         left=0
         right=k
-        maxSum=float(sum(nums[0:k]))
+        maxSum=sum(nums[0:k])
         Sum=maxSum
         while right<len(nums):
             maxSum+=nums[right]
