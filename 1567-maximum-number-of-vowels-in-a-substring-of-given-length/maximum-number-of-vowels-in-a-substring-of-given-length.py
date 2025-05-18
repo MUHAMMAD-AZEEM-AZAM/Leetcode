@@ -17,5 +17,4 @@ class Solution:
                 count+=1  
             if count>maxm:
                 maxm=count
-            print(i,maxm)    
         return maxm              
