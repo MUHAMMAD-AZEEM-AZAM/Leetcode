@@ -2,9 +2,8 @@ class Solution:
     def maxVowels(self, s: str, k: int) -> int:
         count=0
         vowels='aeiou'
-        subString=s[:k]
-        for i in subString:
-            if i in vowels:
+        for i in range(k):
+            if s[i] in vowels:
                 count+=1
         maxm=count 
         i,j=0,k-1
