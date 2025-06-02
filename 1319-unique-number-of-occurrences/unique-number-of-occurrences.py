@@ -6,7 +6,6 @@ class Solution:
                Hmap[i]=1
             else:
                 Hmap[i]+=1   
-        print(Hmap)
         for i in Hmap:
             for j in Hmap:
                 if Hmap[i]==Hmap[j] and i!=j:
