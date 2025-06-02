@@ -1,6 +1,16 @@
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
-        from collections import Counter
-        
-        freq = Counter(arr)  # Fast frequency count using hashmap
-        return len(set(freq.values())) == len(freq)
+        freq_map = {}
+
+        # Count frequencies
+        for num in arr:
+            freq_map[num] = freq_map.get(num, 0) + 1
+
+        # Check if all frequencies are unique
+        freq_set = set()
+        for freq in freq_map.values():
+            if freq in freq_set:
+                return False
+            freq_set.add(freq)
+
+        return True
