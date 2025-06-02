@@ -1,14 +1,6 @@
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
-        Hmap={}
-        for i in arr:
-            if i not in Hmap:
-               Hmap[i]=1
-            else:
-                Hmap[i]+=1   
-        for i in Hmap:
-            for j in Hmap:
-                if Hmap[i]==Hmap[j] and i!=j:
-                    return False
-                   
-        return True    
+        from collections import Counter
+        
+        freq = Counter(arr)  # Fast frequency count using hashmap
+        return len(set(freq.values())) == len(freq)
