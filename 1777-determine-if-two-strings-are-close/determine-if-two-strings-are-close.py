@@ -3,6 +3,6 @@ class Solution:
         counter1=Counter(word1)
         counter2=Counter(word2)
 
-        if sorted(counter1.keys()) != sorted(counter2.keys()):
+        if set(word1)!=set(word2):
             return False
         return sorted(counter1.values())==sorted(counter2.values())    
