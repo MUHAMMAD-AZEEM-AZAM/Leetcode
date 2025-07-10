@@ -7,7 +7,5 @@ class Solution:
             if left and right and flowerbed[i]==0:
                 flowerbed[i]=1
                 n-=1
-                if n<=0:
-                    return True
         return n<=0        
         
