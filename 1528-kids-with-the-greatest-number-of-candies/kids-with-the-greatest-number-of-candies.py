@@ -3,9 +3,6 @@ class Solution:
         maximum = max(candies)
         result = []
         for candy in candies:
-            if candy + extraCandies >= maximum:
-                result.append(True)
-            else:
-                result.append(False)
+            result.append(candy + extraCandies >= maximum)
         return result            
 
