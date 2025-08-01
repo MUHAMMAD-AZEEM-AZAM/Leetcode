@@ -7,9 +7,7 @@ class Solution:
         while start<end:
             h=min(height[start],height[end])
             w=end-start
-            new_area= h*w
-            if area<new_area:
-                area=new_area
+            area = max(area, h*w)
             if height[start]<height[end]:
                 start+=1
             else:
