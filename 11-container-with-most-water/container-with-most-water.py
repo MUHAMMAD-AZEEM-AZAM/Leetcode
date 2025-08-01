@@ -15,4 +15,4 @@ class Solution:
             else:
                 end-=1 
                    
-        return area        
+        return area  
