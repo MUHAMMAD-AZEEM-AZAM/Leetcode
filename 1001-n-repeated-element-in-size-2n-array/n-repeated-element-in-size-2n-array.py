@@ -7,5 +7,4 @@ class Solution:
         for i in nums:
             my_map[f'{i}'] =my_map[f'{i}'] + 1 
             if my_map[f'{i}'] == n:
-                print(my_map)
                 return int(i) 
