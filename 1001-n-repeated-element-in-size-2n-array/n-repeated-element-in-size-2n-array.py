@@ -9,7 +9,13 @@ class Solution:
         #     if my_map[f'{i}'] == n:
         #         return int(i) 
 
-        count = collections.Counter(nums)
-        for k in count:
-            if count[k] >1:
-                return k
+        # count = collections.Counter(nums)
+        # for k in count:
+        #     if count[k] >1:
+        #         return k
+
+        seen = set()
+        for x in nums:
+            if x in seen:
+                return x
+            seen.add(x)
