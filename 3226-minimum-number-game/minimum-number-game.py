@@ -2,7 +2,6 @@ class Solution:
     def numberGame(self, nums: List[int]) -> List[int]:
         arr = []
         nums.sort()
-        print(nums)
         for i in range(0,len(nums)-1, 2):
             a = nums[i]
             nums[i] = nums[i + 1]
