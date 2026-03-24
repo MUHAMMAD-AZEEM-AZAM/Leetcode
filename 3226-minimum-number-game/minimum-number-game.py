@@ -1,12 +1,11 @@
 class Solution:
     def numberGame(self, nums: List[int]) -> List[int]:
         arr = []
-        while len(nums)>0:
-            alice_n = min(nums)
-            nums.remove(alice_n)
-            bob_n = min(nums)
-            nums.remove(bob_n)
-
-            arr.append(bob_n)
-            arr.append(alice_n)
-        return arr
+        nums.sort()
+        print(nums)
+        for i in range(0,len(nums)-1, 2):
+            a = nums[i]
+            nums[i] = nums[i + 1]
+            nums[i+1] = a
+            
+        return nums
