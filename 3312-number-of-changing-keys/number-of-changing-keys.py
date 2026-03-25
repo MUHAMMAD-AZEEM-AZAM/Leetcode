@@ -1,11 +1,12 @@
 class Solution:
     def countKeyChanges(self, s: str) -> int:
-        last_key = s[0].lower()
+        s = s.lower()
+        last_key = s[0]
         count = 0
         for i in range(len(s)):
-            if last_key == s[i].lower():
+            if last_key == s[i]:
                 continue
-            last_key = s[i].lower()
+            last_key = s[i]
             count += 1
 
         return count
