@@ -1,13 +1,13 @@
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
-        odd_array = []
+        odd_array = 0
 
         for i in arr:
             if i % 2 != 0:
-                odd_array.append(i)
+                odd_array += 1
             else:
-                odd_array = []
+                odd_array = 0
 
-            if len(odd_array) == 3:
+            if odd_array == 3:
                 return True
         return False    
