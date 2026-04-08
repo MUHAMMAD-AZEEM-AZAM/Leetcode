@@ -1,34 +1,16 @@
 class KthLargest:
-
     def __init__(self, k: int, nums: List[int]):
+        self.min_heap = []
         self.k = k
-        self.nums = nums
-        self.nums.sort()
+
+        for num in nums:
+            self.add(num)
 
     def add(self, val: int) -> int:
-        index = self.getIndex(val)
-        self.nums.insert(index, val)
-        return self.nums[-self.k]
-
-    def getIndex(self, val: int) -> int:
-        #Binary search
-        left, right = 0, len(self.nums)-1
-        while left <= right:
-            mid = (left + right) // 2
-            mid_number = self.nums[mid]
-
-            if val > mid_number:
-                left = mid + 1
-            elif val < mid_number:
-                right = mid-1
-            else:
-                return mid
-        return left
-        
-
-        
-
-
-# Your KthLargest object will be instantiated and called as such:
-# obj = KthLargest(k, nums)
-# param_1 = obj.add(val)
+        # Add to our min_heap if we haven't processed k elements yet
+        # or if val is greater than the top element (the k-th largest)
+        if len(self.min_heap) < self.k or self.min_heap[0] < val:
+            heapq.heappush(self.min_heap, val)
+            if len(self.min_heap) > self.k:
+                heapq.heappop(self.min_heap)
+        return self.min_heap[0]
