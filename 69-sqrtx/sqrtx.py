@@ -9,11 +9,10 @@ class Solution:
         while low <= high:
             mid = (low + high) // 2
             
-            # Check if mid*mid is within bounds
             if mid * mid <= x:
-                ans = mid      # mid is a candidate
-                low = mid + 1  # try to find a larger one
+                ans = mid  
+                low = mid + 1 
             else:
-                high = mid - 1 # mid is too large
+                high = mid - 1
                 
         return ans
